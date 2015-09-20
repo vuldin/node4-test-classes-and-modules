@@ -15,9 +15,10 @@ class Car{
     if(this.fuel >= 60) throw new RangeError('fuel tank full')
     this.fuel++
   }
-  isFaster(car1,car2){
-    return left.topSpeed > right.topSpeed
+  static isFaster(car1,car2){
+    return car1.topSpeed > car2.topSpeed
   }
 }
 
-export default new Car()
+//export default new Car() // doesn't work in node4!
+module.exports = Car
