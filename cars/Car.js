@@ -4,7 +4,7 @@ class Car{
   constructor(){
     this.fuel = 0
     this.distance = 0
-    this.topSpeed = Math.random()
+    this.topSpeed = (Math.random() * 100).toFixed(2)
   }
   move(){
     if(this.fuel < 1) throw new RangeError('no fuel')
